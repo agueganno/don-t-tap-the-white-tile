@@ -56,10 +56,10 @@ function init()
 	{	if(con.children[i].nodeType == 1)
 			con.children[i].pass = false;
 	}
-	con.onclick = function()
+	con.onclick = function(ev)
 	{
 		// alert('背景被点击了3');
-		judge();
+		judge(ev);
 		// alert('juge被调用完了');
 	};
 }
@@ -76,7 +76,7 @@ function judge(ev)
 // var oEvent = ev||event;
 // 	alert(oEvent.target.className);
 	var con = document.getElementById('div-continer');
-	var oEvent = ev||event;
+	var oEvent = ev;
 	if(oEvent.target.className=='cell-black')
 	{	
 		//alert('点到的是黑块');
